@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Self Introduction</title>
+        <style>
+            body{
+                background-color:rgb(39, 33, 51);
+                font-family:Arial, Helvetica, sans-serif;
+            }
+            header{
+                background:linear-gradient(rgb(44, 2, 44),rgb(219, 141, 184));
+                position:relative;
+                padding-block: 100px;
+                align-items: center;
+                justify-content: space-evenly;
+                display:flex;
+                flex-direction: row;
+                flex-wrap:wrap;
+
+            }
+            #headertext{
+                flex-basis:50%
+
+            }
+            h2{
+                background-color: rgb(143, 98, 139); 
+                padding-block: 15px; 
+                text-align:center;
+                color:rgb(255, 255, 255);
+            }
+            #intro{
+                color:white; 
+                font-size:450%;
+                font-weight: bold;
+            }
+            #sub{
+                color:rgb(46, 33, 45); 
+                font-size: 115%;
+                font-weight: bold;
+                font-family: Arial;
+            }  
+            #DP{
+                width:300px; 
+                float:center;
+            }
+
+            p{
+                color:rgb(251, 250, 251); 
+                font-size: 100%;
+                font-weight: bold;
+                font-family: Arial;
+            }
+            
+            .gooey{
+                background-color: hsl(26, 30%, 95%);
+                border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+                width: 300px; height: 300px;
+                animation: morph 3s linear infinite; 
+                transform-style: preserve-3d;
+                outline: 1px solid transparent;
+                will-change: border-radius;
+                }
+                .gooey:before,
+                .gooey:after{
+                content: '';
+                width: 100%;
+                height: 100%;
+                display: block;
+                position: absolute;
+                left: 0; top: 0;
+                border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+                box-shadow: 5px 5px 89px rgb(248, 132, 238);
+                will-change: border-radius, transform, opacity;
+                animation-delay: 200ms;
+                
+                }
+
+                .gooey:before{
+                animation: morph 3s linear infinite;
+                }
+
+
+                @keyframes morph{
+                0%,100%{
+                border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+                    transform: translate3d(0,0,0) rotateZ(0.01deg);
+                }
+                34%{
+                    border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+                    transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+                }
+                50%{
+                    opacity: .89;
+                    transform: translate3d(0,0,0) rotateZ(0.01deg);
+                }
+                67%{
+                    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+                    transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+                }
+            }
+
+            h1{
+                background-color: rgb(143, 98, 139); 
+                padding-block: 15px; 
+                color:rgb(255, 255, 255);
+               flex: 0 0 100%;
+               text-align:center;
+            }
+
+            p{
+                font-size: 20px; 
+                color:ghostwhite; 
+                font-style: italic;
+                font-family:'arial';
+
+            }
+
+            #sticky{
+                position: sticky;
+                top:0px;
+                padding:10px;
+                border: 5px solid rgba(145, 30, 155, 0.486);
+                background-color: rgb(187, 138, 184); 
+                font-weight:bold;
+                display:flex;
+                justify-content: flex-start;
+                gap:60px;
+                flex-wrap:wrap;
+                color: rgb(94, 55, 93);
+                font-size: 25px;
+                z-index:3;
+            }
+            nav{
+                top:15px; 
+                height:100%;
+                
+            }
+            a{
+                color: rgb(94, 55, 93);
+                text-decoration:none;
+            }
+            
+            .dropbtn {
+                padding:10px;
+                border: 5px solid rgba(145, 30, 155, 0.486);
+                background-color: rgb(187, 138, 184); 
+                color: white;
+                font-weight:bold;
+                padding: 16px;
+                }
+
+                .dropdown {
+                position: sticky;
+                top:0px;
+                z-index:3;
+                font-weight:bold;
+
+                }
+
+                .dropdown-content {
+                position:absolute;
+                display: none;
+                background-color: purple;
+                width: 200px;
+                box-shadow: 0px 8px 16px 0px rgba(201, 156, 198, 0.2);
+                z-index: 2;
+                }
+
+                .dropdown-content a {
+                color: rgb(228, 213, 223);
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                }
+
+                .dropdown:hover .dropbtn {background-color: #8d3e8e;}
+                .dropdown:hover .dropdown-content {display: block;}
+                .dropdown-content a:hover {background-color: rgb(243, 174, 228);color: rgb(48, 38, 45);}
+
+                .blocks{
+                    position:relative; 
+                    top: 0px; 
+                    padding: 15px 70px 15px 115px;
+                    z-index:1;
+                    display:flex;
+                    flex-wrap: wrap;
+                }
+                ul {
+                    font-size: 20px;
+                    color:aliceblue;
+                    font-weight:bold;
+                }
+                
+                .container {
+                    width: 100%;
+                    background-color: #ddd;
+                    }
+                
+                .skills {
+                text-align: right;
+                padding:20px;
+                color: white;
+                }
+
+                .skill25 {width: 25%; background-color: #ad3f8a;}
+                .skill50 {width: 50%; background-color: #89497e;}
+                .skill75 {width: 75%; background-color: #852e5e;}
+                .skill80 {width: 80%; background-color: #74445e;}
+                .skill90 {width: 90%; background-color: #804d68;}
+
+
+                .container:hover .skills { border:5px solid purple;}
+
+                section{
+                    border:5px solid purple;
+                    flex-basis:25%;
+                    min-width: 300px;
+                }
+                #centertext{
+                    display: table;
+                    margin: 0 auto;
+                }
+
+                footer{
+                        padding-block: 15px; 
+                        text-align:center;
+                        color:aliceblue;
+                        position:relative; 
+                        background-color: rgb(104, 35, 98);
+                        z-index:4;
+                }
+                
+
+        </style> 
+    </head>
+    <main>
+    <body>
+        <h2>
+                SANTOS,  MARIA CASSANDRA'S RESUME  
+        </h2>
+
+      <header>  
+          <div class = "gooey">
+            <img id = "DP" src = "img/picc.png" alt="profile picture"/>
+          </div>
+          <div id="headertext">
+                <div id = "intro"> <br>
+                            Hi, I'm Cass :) </div>
+            
+                <div id = "sub"> 
+                            Scroll down to check out my resume :)  </div>
+
+          </div>
+                
+        </header>
+    
+    
+            
+        <nav >
+        <div class="dropdown">
+            <button class="dropbtn">JUMP TO</button>
+            <div class="dropdown-content">
+                <a href ="#about">ABOUT </a>
+                <a href ="#about">EDUCATION </a>
+                <a href ="#skills">SPECIALIZED SKILLS </a>
+                <a href ="#awards"> AWARDS AND CERTIFICATIONS </a>
+                <a href ="#affil">AFFILIATIONS</a>
+                <a href ="#interests">INTERESTS</a>
+                <a href ="#research">RESEARCH</a>
+            </div>
+          </div>
+<!-- BLOCKS-->
+          <div id = "about" class = "blocks" style = "background-color: rgba(142, 91, 146, 0.582);">
+               <h1>ABOUT</h1> 
+               <p> "I am a Bachelor of Science in Information Technology student of Polytechnic University of The Philippines, San Juan. I am currently 
+                honing my skills in hopes of Launching a start-up for Filipino Users as well as becoming a multidisciplinary developer. 
+                I am also very interested in Arts and Design which I would be willing to apply to things I build." </p>
+
+             <h1>EDUCATION</h1>
+                <ol style ="font-size: 20px; font-style:italic; color:ghostwhite; font-family:'arial';">
+                    <li>STEM (Science, Technology, Engineering and Mathematics) / 2019</li>
+                    <li>BSIT (Bachelor of Science in Information Technology) / 2023</li>
+                </ol>
+            </div>
+            
+            <div id="skills" class = "blocks" 
+            style = "background-color: rgb(172, 121, 155,  0.882);
+                    justify-content:center;
+                    gap:50px 300px;">
+                        
+                <DIV style = " position:relative; flex: 0 0 100%;">
+                    <h1> COMPUTER SKILLS</h1>
+
+                    <div style = "align-items: center;"> 
+                        <p>HTML</p>
+                        <div class="container">
+                        <div class="skills skill75">75%</div>
+                        </div>
+
+                        <p>CSS</p>
+                        <div class="container">
+                        <div class="skills skill80">80%</div>
+                        </div>
+
+                        <p>PHP</p>
+                        <div class="container">
+                        <div class="skills skill50">50%</div>
+                        </div>
+
+                        <p>C</p>
+                        <div class="container">
+                        <div class="skills skill80">80%</div>
+                        </div>
+
+                        <p>C#</p>
+                        <div class="container">
+                        <div class="skills skill75">75%</div>
+                        </div>
+
+                        <p>Python</p>
+                        <div class="container">
+                        <div class="skills skill75">75%</div>
+                        </div>
+
+                        <p>MSSQL</p>
+                        <div class="container">
+                        <div class="skills skill80">80%</div>
+                        </div>
+
+                        <p>JAVA</p>
+                        <div class="container">
+                        <div class="skills skill75">75%</div>
+                        </div>
+
+                        <p>COBOL</p>
+                        <div class="container">
+                        <div class="skills skill50">50%</div>
+                        </div>
+                    </div>
+                        
+                </DIV>
+                
+              <section>
+                <h2> PROGRAMMING SOFTWARE</h2>
+                  <ul>
+                      <li>Visual Studio Windows forms</li>
+                      <li>Visual Studio Code</li>
+                      <li>Visual Studio SSDT</li>
+                      <li>Microsoft SQL Server 18.10</li>
+                      <li>Dev C++</li>
+                      <li>TextPad</li>
+                      <lI>Python IDLE</li>
+                      <lI>Ui Path Studio </li>
+                  </ul>   
+            </section>
+
+              <section>
+                <h2> GRAPHIC AND VIDEO SOFTWARE</h2>
+                    <ul>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe XD</li>
+                        <li>Adobe Premiere Pro</li>
+                        <li>Adobe After Effects (beginner)</li>
+                        <li>Adobe Illustrator (beginner)</li>
+                        <li>Blender (beginner)</li>
+                    </ul>  
+                </section>
+                <section>
+                    <h2> MICROSOFT </h2>
+                      <ul>
+                        <li> Microsoft Excel</li>
+                        <li>Microsoft Word</li>
+                        <li>Microsoft Powerpoint</li>
+                        <li>Microsoft OneNote</li>
+                        <li>Microsoft Teams</li>
+                        <li>Visual Studio Code</li>
+                    </ul>   
+                </section>
+                <section>
+                    <h2> GSUITE </h2>
+                      <ul>
+                        <li>Google Sheets</li>
+                        <li>Google Docs</li>
+                        <li>Google Mail</li>
+                        <li>Google Keep</li>
+                        <li>Google Meet</li>
+                        <li>Google Slides</li>
+                    </ul>   
+                </section>
+
+                </div>   
+                
+                
+            
+                <div id="awards" class="blocks" style="background-color:rgba(79, 45, 81, 0.856);">
+                    <h1> AWARDS AND CERTIFICATIONS </h1> 
+                    <div id="centertext">
+                        <ul>
+                            <li> Leadership award 2016-2017 and 2012-2013 </li>
+                            <li>
+                                TPG Webinar Series 3.0: Coding a Better World in the Current 
+                                Pandemic (2020)
+                             </li>
+                             <li>
+                                Introduction to Malware Threats Webinar(2020) 
+                             </li>
+                             <li>
+                                Introduction to Email Threats and Security Attacks Webinar(2020) 
+                             </li>
+                             <li>
+                                Cisco student level credentials - Networking Essentials (2021)
+                             </li>
+                             <li>
+                                19th Youth Congress on Information Technology AM and PM Session: Career Development (2021)
+                             </li>
+                             <li>
+                                19th Youth Congress on Information Technology: Digital Startups (2021)
+                             </li>
+                             <li>
+                                19th Youth Congress on Information Technology: Privacy and Cybersecurity (2021)
+                             </li>
+                             <li>
+                                19th Youth Congress on Information Technology: Research as a career (2021)
+                            </li>
+                             <li>
+                                19th Youth Congress on Information Technology: ICT Opportunities in the Philippines (2021)
+                            </li>
+                             <li>
+                                 Intellectual Property Policy in the academe: What You Should Know (2021)
+                            </li>
+                        </ul> 
+                    </div>
+                </div>
+                    
+             
+                <div id="affil" class="blocks" style="background-color:rgba(127, 74, 130, 0.856)">
+                    <h1> AFFILIATIONS </h1> 
+                    <div id="centertext">
+                        <ul>
+                            <li> 
+                                Student Council, representative 2013-2014
+                            </li>
+                            <li>
+                                Student Council, Sergeant at arms 2014-2015
+                             </li>
+                             <li>
+                                Student Council, Vice President 2015-2016
+                             </li>
+                             <li>
+                                Student Council, President 2016-2017
+                             </li>
+                             <li>
+                                St. Paul COllege Pasig Football, President 2018-2019
+                             </li>
+                             <li>
+                                Volunteer Artist, Malaya Initiative
+                             </li>
+                             <li>
+                                Small business owner of Wendy’s ground coffee
+                             </li>
+                             <li>
+                                Small business owner of art commissions
+                             </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="interests" class="blocks" style="background-color:rgba(165, 83, 169, 0.856)">
+                    <h1> INTERESTS </h1> 
+                    <div id="centertext">
+                        <ul>
+                            <li> 
+                                Arts and Design
+                            </li>
+                            <li>
+                                Innovations and Technology
+                             </li>
+                             <li>
+                                Graphic designing and Photography
+                             </li>
+                             <li>
+                                Animation and Illustration
+                             </li>
+                             <li>
+                                Environmental Science
+                             </li>
+                             <li>
+                                Physics and Astronomy
+                             </li>
+                             <li>
+                                Research
+                             </li>
+                        </ul>   
+                    </div>
+                        
+                </div>
+
+                <div id="research" class="blocks" style="background-color:rgba(148, 73, 150, 0.856)">
+                    <h1> RESEARCH STUDIES </h1> 
+                    <div id="centertext">
+                        <ul>
+                            <li> 
+                                FACTORS OF SOCIAL INFLUENCES THAT AFFECT THE MEAL PATTERN OF FILIPINOS (2018)
+                            </li>
+                            <li>
+                                Proportions of Eco-Bricks Using Shredded Plastics as Base Component for Durable Structures (2020)
+                             </li>
+                             <li>
+                                An Assessment of Online Filipinos Experience and Perceptions with Color Calibrations for Visual Comfort on Screen-Display(2021)
+                             </li>
+                             <li>
+                                Filipino micro-entrepreneurs’ Perceptions on Adapting Mobile Applications to their Businesses amidst COVID-19 Pandemic In San Juan City (ongoing)
+                             </li>
+                        </ul>   
+                    </div>
+                        
+                </div>
+
+               
+
+
+
+            
+            <footer>
+                    Phone No: (63)9260762042 &emsp;&emsp;&emsp; Email Address: cassantos757@gmail.com &emsp;&emsp;&emsp; Adress: Makati City, Philippines
+            </footer>
+
+         </nav>
+    </main> 
+
+
+        
+
+</body>
+</html>
